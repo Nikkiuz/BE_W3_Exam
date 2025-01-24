@@ -1,0 +1,30 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="BE_W3_Exam">
+        <class>org.example.Classi.Prestito</class>
+        <class>org.example.Classi.Utente</class>
+        <class>org.example.Classi.Libro</class>
+        <class>org.example.Classi.Pubblicazione</class>
+        <class>org.example.Classi.Rivista</class>
+        <class>org.example.Classi.Autore</class>
+        <class>org.example.Classi.Genere</class>
+        <class>org.example.DAO.PrestitoDaoImpl</class>
+        <class>org.example.DAO.PubblicazioneDaoImpl</class>
+        <class>org.example.DAO.PrestitoDaoImpl</class>
+        <class>org.example.DAO.UtenteDaoImpl</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/biblioteca" />
+            <property name="jakarta.persistence.jdbc.user" value="postgres" />
+            <property name="jakarta.persistence.jdbc.password" value="MsfaZn2020!" />
+
+            <!-- Abilita il logging SQL -->
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <!-- dialetto (vocaboli) -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+            <!-- Creazione automatica delle tabelle -->
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+    </persistence-unit>
+</persistence>
