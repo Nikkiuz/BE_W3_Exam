@@ -6,10 +6,11 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
+@Table(name = "autore")
 public class Autore {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private UUID uniqueId;
+	private UUID uniqueID;
 	private String nome;
 	private String cognome;
 

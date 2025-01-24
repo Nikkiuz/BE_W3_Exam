@@ -6,7 +6,7 @@ import jakarta.persistence.Persistence;
 
 public class EntityManagerUtil {
 
-		private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("gestioneBibliotecaPU");
+		private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("BE_W3_Exam");
 
 		public static EntityManager getEntityManager() {
 			return emf.createEntityManager();

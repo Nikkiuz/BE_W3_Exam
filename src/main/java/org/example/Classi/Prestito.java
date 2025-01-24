@@ -6,16 +6,17 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
+@Table(name = "prestito")
 public class Prestito {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private UUID uniqueId;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "utente_id", nullable = false)
 	private Utente utente;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "pubblicazione_id", nullable = false)
 	private Pubblicazione pubblicazione;
 

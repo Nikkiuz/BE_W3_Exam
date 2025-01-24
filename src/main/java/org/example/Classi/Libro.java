@@ -1,11 +1,9 @@
 package org.example.Classi;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "libri")
 public class Libro extends Pubblicazione {
 
 	@ManyToOne(cascade = CascadeType.PERSIST)
@@ -36,8 +34,8 @@ public class Libro extends Pubblicazione {
 
 	}
 
-	public Libro(String titolo, int annoPubblicazione, int numeroPagine, Autore autore, Genere genere) {
-		super(titolo, annoPubblicazione, numeroPagine);
+	public Libro(String titolo, int anno_pubblicazione, int numero_pagine, Autore autore, Genere genere) {
+		super(titolo, anno_pubblicazione, numero_pagine);
 		this.autore = autore;
 		this.genere = genere;
 	}
